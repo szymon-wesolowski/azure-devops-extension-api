@@ -525,7 +525,7 @@ export class BuildRestClient extends RestClientBase {
      * @param sourceBuildId - 
      */
     public async queueBuild(
-        build: Build.Build,
+        buildStartMetadata: Build.BuildStartMetadata,
         project: string,
         ignoreWarnings?: boolean,
         checkInTicket?: string,

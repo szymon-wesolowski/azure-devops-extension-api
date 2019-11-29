@@ -1336,6 +1336,33 @@ export interface BuildSettings {
     maximumRetentionPolicy: RetentionPolicy;
 }
 
+export interface BuildStartMetadata {
+    /**
+     * The build definition Id to queue a build.
+     */
+    definition: { id: number };
+    /**
+     * The source branch.
+     */
+    sourceBranch: string;
+    /**
+     * The source version.
+     */
+    sourceVersion: string;
+    /**
+     * The reason that the build was queue.
+     */
+    reason: BuildReason;
+    /**
+     * A list of demands that represents the agent capabilities required by this build.
+     */
+    demands: Demand[];
+    /**
+     * The parameters for the build.
+     */
+    parameters: string
+}
+
 export enum BuildStatus {
     /**
      * No status.
